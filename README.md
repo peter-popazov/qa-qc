@@ -1,5 +1,7 @@
 # Chinese Restaurant Website Project
 
+### Link: https://peter-popazov.github.io/qa-qc/
+
 ## Overview
 
 This project is a simple **Chinese Restaurant** website designed using **HTML** and **CSS**. The website aims to showcase a restaurant's menu, location, and other essential details. It is optimized for both desktop and mobile viewing.
