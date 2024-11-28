@@ -31,7 +31,7 @@ jobs:
 
     - name: Install Playwright browsers
       working-directory: ./e2e-screenshot-tests
-      run: npx playwright instal
+      run: npx playwright install
 
     - name: Run tests
       working-directory: ./e2e-screenshot-tests
