@@ -14,12 +14,16 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20.x'
+
+    - name: Set working directory
+      working-directory: ./e2e-screenshot-tests
+      run: echo "Working directory set to /e2e-screenshot-tests"
 
     - name: Install dependencies
       working-directory: ./e2e-screenshot-tests
@@ -29,6 +33,12 @@ jobs:
       working-directory: ./e2e-screenshot-tests
       run: npx playwright install
 
+    - name: Start server
+      working-directory: ./e2e-screenshot-tests
+      run: npm start &
+      env:
+        PORT: 3000
+
     - name: Run tests
       working-directory: ./e2e-screenshot-tests
-      run: npm test
+      run: npx playwright test
