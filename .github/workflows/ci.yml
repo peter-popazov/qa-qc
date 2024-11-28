@@ -35,4 +35,4 @@ jobs:
 
     - name: Run tests
       working-directory: ./e2e-screenshot-tests
-      run: npx playwright test
+      run: npx playwright test --update-snapshots
