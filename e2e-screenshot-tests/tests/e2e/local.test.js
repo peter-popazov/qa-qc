@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 // Test 1: Check page title
 test('should have correct page title', async ({ page }) => {
     await page.goto('http://localhost:3000');
-    await expect(page).toHaveTitle('Test Page');
+    await expect(page).toHaveTitle('Incorrect Title');  // Очікуємо неправильну назву
 });
 
 // Test 2: Verify button visibility
