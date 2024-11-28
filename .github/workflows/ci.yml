@@ -31,13 +31,7 @@ jobs:
 
     - name: Install Playwright browsers
       working-directory: ./e2e-screenshot-tests
-      run: npx playwright install
-
-    - name: Start server
-      working-directory: ./e2e-screenshot-tests
-      run: npm start &
-      env:
-        PORT: 3000
+      run: npx playwright instal
 
     - name: Run tests
       working-directory: ./e2e-screenshot-tests
